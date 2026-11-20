@@ -10,8 +10,8 @@ export function AppNav({ session }: { session: { userId: string } | null; initia
     if (response.ok) { localStorage.removeItem('brandToken'); setOpen(false); router.push('/'); router.refresh(); }
   }
   const links = [
-    ['/', 'Fitting room'],
-    ['/vibecheck', '✨ VibeCheck Mirror'],
+    ['/', '✨ VibeCheck Mirror'],
+    ['/studio', 'Fitting room'],
     ['/docs', 'Studio guide'],
     ['/contact', 'Get in touch'],
   ];

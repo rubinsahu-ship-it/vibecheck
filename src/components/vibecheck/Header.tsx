@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { Sparkles, Camera, ShieldCheck, AlertCircle, RefreshCw, FlaskConical } from 'lucide-react';
 import type { CameraStatus } from '@/hooks/useCamera';
 
@@ -103,6 +104,15 @@ export function Header({
             <FlaskConical className="w-3.5 h-3.5 text-amber-400" />
             <span className="hidden sm:inline">Test Fixtures</span>
           </button>
+
+          {/* Fitting Room Studio Link */}
+          <Link
+            href="/studio"
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-neutral-400 hover:text-neutral-200 bg-neutral-900/60 hover:bg-neutral-800 border border-neutral-800 hover:border-neutral-700 transition-colors"
+            title="Open VirtuFit Fitting Room Studio"
+          >
+            <span>Fitting Room ↗</span>
+          </Link>
 
           {/* Next Visitor Button */}
           {showNextVisitor && (

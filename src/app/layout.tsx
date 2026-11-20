@@ -9,8 +9,8 @@ import "./globals.css";
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: "VirtuFit — The open fitting studio",
-  description: "Try clothes in a live AI mirror or generate a finished try-on photo. Upload your own garments and find your next look.",
+  title: "VibeCheck — Live AI Outfit Advice & Style Mirror",
+  description: "A live webcam mirror offering friendly styling advice for your chosen vibe using Google Gemini AI.",
 };
 
 export default async function RootLayout({

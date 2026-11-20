@@ -17,7 +17,7 @@ export function ConditionalNav({
 }) {
   const pathname = usePathname() ?? '';
   const isAdmin = pathname.startsWith('/admin');
-  const isVibeCheck = pathname.startsWith('/vibecheck');
+  const isVibeCheck = pathname === '/' || pathname.startsWith('/vibecheck');
   if (isAdmin || isVibeCheck) {
     return <>{children}</>;
   }
