@@ -4,8 +4,7 @@ import { PrismaPg } from '@prisma/adapter-pg';
 const globalForPrisma = globalThis as unknown as { prisma: PrismaClient };
 
 function createPrisma() {
-  let connectionString = process.env.DATABASE_URL;
-  if (!connectionString) throw new Error('DATABASE_URL is not set');
+  let connectionString = process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/virtufit';
   // Use verify-full to avoid pg driver warning and keep strict SSL (require/prefer become weaker in future)
   if (!connectionString.includes('localhost') && connectionString.includes('postgres')) {
     if (!connectionString.includes('sslmode=')) {

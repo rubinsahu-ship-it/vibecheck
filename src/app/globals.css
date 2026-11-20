@@ -126,3 +126,38 @@ h1 {line-height:1.08} h2 {line-height:1.18}
 .studio-panel li{margin:8px 0;padding-left:3px;font-size:14px}
 .nav-sign-out{border:0;background:transparent;color:var(--vf-muted);font-size:12px;padding:0;cursor:pointer}
 .nav-sign-out:hover{color:var(--vf-accent)}
+
+/* ==============================================================================
+   VibeCheck Mirror Experience Styles
+   ============================================================================== */
+.mirrored-video {
+  transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+}
+
+@keyframes laser-sweep {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    top: 98%;
+    opacity: 1;
+  }
+  100% {
+    top: 0%;
+    opacity: 0.8;
+  }
+}
+
+.animate-scan-sweep {
+  animation: laser-sweep 2.4s ease-in-out infinite;
+}
+
+.amber-glow {
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.2);
+}
+
+.amber-glow-strong {
+  box-shadow: 0 0 35px rgba(245, 158, 11, 0.4);
+}
